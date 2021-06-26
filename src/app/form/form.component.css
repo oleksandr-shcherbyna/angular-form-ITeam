@@ -1,0 +1,136 @@
+form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 rgb(68, 68, 68);
+    padding: 30px 60px 30px 60px;
+}
+label {
+    font-family: "Roboto", "sans-serif";
+    color: black;
+    font-size: 20px;
+}
+input, select {
+    background: rgb(248, 248, 248);
+    border-radius: 2px;
+    border: 1px solid rgb(206, 206, 206);
+    outline: none;
+    padding: 3px 5px 3px 5px;
+    font-family: "Roboto", "sans-serif";
+    font-size: 17px;
+    height: 35px;
+}
+textarea {
+    resize: none;
+    outline: none;
+    padding: 3px 5px 3px 5px;
+    font-family: "Roboto", "sans-serif";
+    font-size: 17px;
+    background: rgb(248, 248, 248);
+    border-radius: 2px;
+    border: 1px solid rgb(206, 206, 206);
+    height: 70px;
+}
+.form-title {
+    font-family: "Lobster", "sans-serif";
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.names-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+.single-name-container {
+    display: flex;
+    flex-direction: column;
+}
+#left-name-container {
+    padding-right: 20px;
+}
+#right-name-container {
+    padding-left: 20px;
+}
+.element-container {
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+.submit-btn {
+    width: 100%;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 rgb(68, 68, 68);
+    border: none;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    padding: 10px 0px 10px 0px;
+    height: auto;
+    transition: transform 0.5s;
+}
+.submit-btn:hover {
+    cursor: pointer;
+    transform: translateY(4px);
+    transition: transform 0.5s;
+}
+.date-picker-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.date-picker-container > input {
+    width: 100%;
+    padding: 3px 50px 3px 5px;
+}
+
+mat-datepicker-toggle {
+    color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+option {
+    color: black;
+}
+.ng-valid[required], .np-valid.required {
+    border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442;
+}
+#technology-version {
+    pointer-events: none;
+}
+.successfully-sent {
+    color: green;
+}
+.error {
+    color: green;
+}
+@media all and (max-width: 500px) {
+    form {
+        padding: 30px 10px 30px 10px;
+    }
+    label {
+        font-size: 15px;
+    }
+    input, select {
+        font-size: 12px;
+        height: 30px;
+    }
+    textarea {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,44 @@
+<div class="form-container">
+    <form [formGroup]="registrationForm" #surveyForm="ngForm" (ngSubmit)="onSubmit()"> 
+        <p class="form-title">Survey form</p>
+        <div class="names-container">
+            <div class="single-name-container" id="left-name-container">
+                <label for="first-name">First name</label>
+                <input type="text" name="name" id="first-name" class="name-input form-control" formControlName="firstName" required>
+            </div>
+            <div class="single-name-container" id="right-name-container">
+                <label for="second-name">Second name</label>
+                <input type="text" name="" id="second-name" class="name-input" formControlName="lastName" required>
+            </div>
+        </div>
+        <div class="element-container">
+            <label for="date-of-birth">Date of birth</label>
+            <div class="date-picker-container">
+                <input matInput [matDatepicker]="picker" id="date-of-birth" formControlName="dateOfBirth" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </div>
+        <div class="element-container">
+            <label for="technology">Framework</label>
+            <select name="" id="technology" formControlName="framework" required (change)="removeSelectDisable()">
+                <option value="angular">Angular</option>
+                <option value="vue">Vue</option>
+                <option value="react">React</option>
+            </select>
+        </div>
+        <div class="element-container">
+            <label for="technology-version">Framework version (choose framework first)</label>
+            <select name="" id="technology-version" formControlName="frameworkVersion" required></select>
+        </div>
+        <div class="element-container">
+            <label for="email">Email</label>
+            <input type="email" name="" id="email" formControlName="email" required>
+        </div>
+        <div class="element-container">
+            <label for="hobbies">Hobbies</label>
+            <textarea name="" id="hobbies" formControlName="hobby" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" [disabled]="!surveyForm.form.valid">Submit!</button> 
+    </form>
+</div>
